@@ -26,6 +26,7 @@
 
 	<!-- Favicons and Touch Icons -->
 	<!-- https://www.sitepoint.com/a-basic-html5-template/ -->
+	<!-- TODO: Maybe use https://realfavicongenerator.net/ -->
 	<!--
 	<link rel="icon" href="/favicon.ico">
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -51,11 +52,29 @@
 		<input type="text" onkeyup="check_password (this);">
 	</div>
 	<br><br>
+
 	<h2>Question 1</h2>
+	<p>Name example tasks for...</p>
+	<p style="margin-left: 40px;">(a) ...supervised learning.</p>
+	<div id="hidden_div1" style="display: none;">
+		<details style="margin-left: 90px;">
+		  <summary>Solution</summary>
+		  <p>Classification and regression.</p>
+		</details>
+	</div>
+	<p style="margin-left: 40px;">(b) ...unsupervised learning.</p>
+	<div id="hidden_div2" style="display: none;">
+		<details style="margin-left: 90px;">
+		  <summary>Solution</summary>
+		  <p>Clustering, visualisation, and dimensionality reduction.</p>
+		</details>
+	</div>
+
+	<h2>Question 2</h2>
 	<p>Explain whether each scenario is a classification or regression problem. In the case of classification, what are the number of classes? Finally, provide the values of \(N\) and \(D\).</p>
 
 	<p style="margin-left: 40px;">(a) We are considering launching a new product and wish to know whether it will be a success or a failure. We collect data on 20 similar products that were previously launched. For each product, we recorded if it was a success or failure, the price charged for the product, the marketing budget, the competition price, and ten other variables.</p>
-	<div id="hidden_div1" style="display: none;">
+	<div id="hidden_div3" style="display: none;">
 		<details style="margin-left: 90px;">
 		  <summary>Solution</summary>
 		  <p>This is a classification problem, where the output \(y\) denotes if the product will be a success or failure and the input \(x\) collects information on the price charged for the product, the marketing budget, the competition price, and ten other variables. In this case, we have \(C = 2, N = 20,\) and \(D = 13\).</p>
@@ -63,7 +82,7 @@
 	</div>
 
 	<p style="margin-left: 40px;">(b) We are interested in predicting the percentage change in the GBP/EUR exchange rate in relation to weekly changes in world stock markets. We collect weekly data for all of 2018, and for each week, we record the percentage change in the GBP/EUR exchange rate, the percentage change in the UK market, the percentage change in the German market, the percentage change in the US market, and the percentage change in the Chinese market.</p>
-	<div id="hidden_div2" style="display: none;">
+	<div id="hidden_div4" style="display: none;">
 		<details style="margin-left: 90px;">
 		  <summary>Solution</summary>
 		  <p>This is a regression problem, where the output \(y\) denotes the percentage change in the GBP/EUR exchange rate and the input \(x\) collects information on the the percentage change in the UK market, the percentage change in the German market, the percentage change in the US market, and the percentage change in the Chinese market. In this case, we have \(N = 52\) and \(D = 4\).</p>
@@ -71,7 +90,7 @@
 	</div>
 
 	<p style="margin-left: 40px;">(c) We are interested in identifying species of birds based on audio recordings. We have ten-second audio recordings of 645 birds, and 35 features have been extracted to represent the signals in the raw audio recordings. There are 19 bird species in the dataset.</p>
-	<div id="hidden_div3" style="display: none;">
+	<div id="hidden_div5" style="display: none;">
 		<details style="margin-left: 90px;">
 			<summary>Solution</summary>
 			<p>
@@ -83,7 +102,7 @@
 	</div>
 
 	<p style="margin-left: 40px;">(d) An e-commerce company sells fresh produce online. Currently, every product must be manually inspected to determine if it is rotten before being sent to the customer. To save resources, the company is interested in automating this process. They have collected 2,000 images of strawberries of size \(50 \times 50\) and have manually determined whether each strawberry is rotten.</p>
-	<div id="hidden_div4" style="display: none;">
+	<div id="hidden_div6" style="display: none;">
 		<details style="margin-left: 90px;">
 			<summary>Solution</summary>
 			<p>
@@ -91,6 +110,44 @@
 	this case, we have \(C = 2, N = 2000,\) and \(D = 50^2\).
 		  	<br><br>
 		  	<strong>Note:</strong> Amazon purchased Whole Foods in 2017. And since the purchase, Amazon has been developing algorithms and exploring different inputs (e.g. different types of images) to automate the process of manually checking for rotten foods.
+			</p>
+		</details>
+	</div>
+
+	<h2>Question 3</h2>
+	<p>Think of some example real-life applications for the following types of learning.</p>
+	<p style="margin-left: 40px;">(a) Describe the responce and potential predictors for a <em>Classification</em> project.</p>
+	<div id="hidden_div7" style="display: none;">
+		<details style="margin-left: 90px;">
+			<summary>Solution</summary>
+			<p>
+		  	Answers will vary but an example could be:
+		  	<br>
+		  	<em>We could try classify someone as ill or healthy (responce variable) using inputs such as resting heart rate, resting breath rate, mile run time.</em>
+			</p>
+		</details>
+	</div>
+
+	<p style="margin-left: 40px;">(b) Describe the responce and potential predictors for a <em>Regression</em> project.</p>
+	<div id="hidden_div8" style="display: none;">
+		<details style="margin-left: 90px;">
+			<summary>Solution</summary>
+			<p>
+		  	Answers will vary but an example could be:
+		  	<br>
+		  	<em>We could try predict the salary of an individual (responce variable) using inputs such as their education, work history, and skillsets.</em>
+			</p>
+		</details>
+	</div>
+
+	<p style="margin-left: 40px;">(c) Describe a potential <em>Clustering</em> project.</p>
+	<div id="hidden_div9" style="display: none;">
+		<details style="margin-left: 90px;">
+			<summary>Solution</summary>
+			<p>
+		  	Answers will vary but an example could be:
+		  	<br>
+		  	<em>We could try do market research on a product using data such as incomes, location, age, sex, and opinion polls to segment the potential customer base.</em>
 			</p>
 		</details>
 	</div>
@@ -113,7 +170,7 @@
 		function check_password (input_element) {
 		  	
 		  	// number of questions
-			let N=4
+			let N=9
 
 			//get value of input
 			var password = input_element.value;
